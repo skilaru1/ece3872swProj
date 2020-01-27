@@ -35,6 +35,7 @@
 // global variables
 Servo head;  // create servo object to control the looking direction
 long prevMillis; // used to time loop()
+int count = 0;
 
 /**
  *  Create reusable functions here or in additional files that
@@ -55,7 +56,15 @@ void stopRobot(){
   // Disable the motors?  Set a speed variable to 0?
   // Depends on your hierarchy and where this function
   // fits into it.
-} 
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  analogWrite(ENA, 0);
+  analogWrite(ENB, 0);
+}
+
+
 
 /**
  *  Motor controller control information:
@@ -68,6 +77,60 @@ void stopRobot(){
  *  to control the speed of the motors.  See the analogWrite()
  *  Arduino function for an easy way to create PWM.
  */
+ 
+void forward(int speed) {
+  //left motors
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  //right motors
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  //speed control
+  analogWrite(ENA, speed);
+  analogWrite(ENB, speed);
+}
+
+void back(int speed) {
+  //left motors
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  //right motors
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+  //speed control
+  analogWrite(ENA, speed);
+  analogWrite(ENB, speed);
+}
+
+void left(int speed, bool inPlace) {
+  //left motors
+  digitalWrite(IN1, LOW);
+  if (inPlace) {
+    digitalWrite(IN2, HIGH);
+  } else {
+    digitalWrite(IN2, LOW);
+  }
+  
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  //speed control
+  analogWrite(ENA, speed);
+}
+
+void right(int speed, bool inPlace) {
+  
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+
+  if(inPlace) {
+    digitalWrite(IN3, HIGH);
+  } else {
+    digitalWrite(IN3, LOW);
+  }
+  digitalWrite(IN4, LOW);
+  
+  analogWrite(ENB, speed);
+}
 
 /** 
  *  Ultrasonic distance measurement.  Returns distance in cm.
@@ -120,6 +183,8 @@ void setup(){
 
   // record the current time for the timing function
   prevMillis = millis();
+
+  
 }
 
 void loop() {
@@ -132,6 +197,13 @@ void loop() {
   // any other code from executing until it returns.  This will
   // take a variable amount of time, up to ~10 ms.
   Serial.println(readDistance());
+//  if (count < 50) forward(127);
+//  else if (count < 100) back(127);
+  if (count < 50) right(255, true);
+  else if (count < 100) left(255, true);
+  else count = 0;
+
+  ++count;
   
   // Example of how the sensor macros can be used.  Whether or not this
   // type of sensor interaction belongs in loop() is up to your
