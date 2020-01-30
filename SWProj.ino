@@ -38,7 +38,7 @@ long prevMillis; // used to time loop()
 int count = 0;
 int state = 0;  // current state (A = 0, B = 1, etc.)
 int curr = 0;   // current distance read
-int turn = 0;   // 0 for left, 1 for right
+int turn;   // 0 for left, 1 for right
 boolean startTurn = false; // when to turn at top of loop
 
 /**
@@ -192,13 +192,13 @@ void setup(){
 
 void moveOnLine() {
   if (LT_M) {     // make sure line is centered under robot
-    forward(127);
+    forward(150);
   } else {
     while (!LT_M) { // continue shifting until line is centered again
-      if (LT_L) {   // if line is too far left, shift right
-        right(50, false);
+      if (LT_R) {   // if line is too far left, shift right
+        right(150, true);
       } else {      // if line is too far right, shift left
-        left(50, false);
+        left(150, true);
       }
     }
   }
@@ -207,9 +207,9 @@ void moveOnLine() {
 
 void doTurn() {
   if (turn == 0) {
-    left(50, true);
+    left(200, true);
   } else {
-    right(50, true);
+    right(200, true);
   }
 }
 
@@ -225,7 +225,8 @@ void loop() {
     
     curr = readDistance();
     Serial.println(curr);
-    if (curr <= 15) {
+    if (curr <= 10) {
+      stopRobot();
       state = 1;      // if close to block A, move to state B
       head.write(180);     // turn sonar head to left
       delay(3000);
@@ -234,11 +235,10 @@ void loop() {
   // STATE: B
   } else if (state == 1) {  // B: check for block B state
     Serial.println("State B");
-    stopRobot();
     
     curr = readDistance();
     Serial.println(curr);
-    if (curr < 40) {
+    if (curr <= 15) {
       turn = 0;      // block B found, move to the left with state C
       Serial.println("Turn Left");
     } else {
@@ -291,7 +291,7 @@ void loop() {
     if (LT_M && LT_R && LT_L) {   // check for long black bar
       head.write(90);
       delay(1000);
-      state = 1;  // return to start state
+      state = 0;  // return to start state
     }
 
   // STATE: F
