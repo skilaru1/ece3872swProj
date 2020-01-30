@@ -205,7 +205,7 @@ void moveOnLine() {
   return;
 }
 
-void doTurn() {
+void doTurn(int turn) {
   if (turn == 0) {
     left(200, true);
   } else {
@@ -272,8 +272,9 @@ void loop() {
 
     if (LT_L && LT_R) { // when turning point is reached, stop robot and begin to turn
       startTurn = true;
-      doTurn();
-      delay(2000);
+      doTurn(turn);
+      forward(150);
+      startTurn = false;
       state = 4;   
     }
 
@@ -290,7 +291,7 @@ void loop() {
 
     if (LT_M && LT_R && LT_L) {   // check for long black bar
       head.write(90);
-      delay(1000);
+      delay(3000);
       state = 0;  // return to start state
     }
 
