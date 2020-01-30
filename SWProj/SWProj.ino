@@ -40,6 +40,7 @@ int state = 0;  // current state (A = 0, B = 1, etc.)
 int curr = 0;   // current distance read
 int turn;   // 0 for left, 1 for right
 boolean startTurn = false; // when to turn at top of loop
+int prev;
 
 /**
  *  Create reusable functions here or in additional files that
@@ -191,32 +192,40 @@ void setup(){
 
 
 void moveOnLine() {
-  if (LT_M) {     // make sure line is centered under robot
+//  if (LT_M) {     // make sure line is centered under robot
+//    forward(150);
+//  } else {
+//    while (!LT_M) { // continue shifting until line is centered again
+//      if (LT_R) {   // if line is too far left, shift right
+//        right(150, true);
+//      } else {      // if line is too far right, shift left
+//        left(150, true);
+//      }
+//    }
+//  }
+
+  if (LT_R) {
+    right(150, true);
+    prev = 1;
+  } else if (LT_L) {
+    left (150, true);
+    prev = 0;
+  } else if (LT_M) {
     forward(150);
   } else {
-    while (!LT_M) { // continue shifting until line is centered again
-      if (LT_R) {   // if line is too far left, shift right
-        right(150, true);
-      } else {      // if line is too far right, shift left
-        left(150, true);
-      }
+    if (prev == 1) {
+      right(200, true);
+    } else {
+      left(200, true);
     }
   }
   return;
 }
 
-void doTurn(int turn) {
-  if (turn == 0) {
-    left(200, true);
-  } else {
-    right(200, true);
-  }
-}
-
 void loop() {
   // calling waitForTick() at the beginning of loop will keep it periodic
   waitForTick(); 
- 
+  
   // Iterate through state machine
   // STATE: A
   if (state == 0) {         // A: start state
@@ -269,11 +278,18 @@ void loop() {
     if (!startTurn) {   // before reach turning point, continue on line
       moveOnLine();
     }
-
+    
     if (LT_L && LT_R) { // when turning point is reached, stop robot and begin to turn
       startTurn = true;
-      doTurn(turn);
-      forward(150);
+      Serial.println(LT_M);
+      while (!LT_M) { 
+        if (turn == 0) {
+          left(200, true);
+        } else {
+          right(200, true);
+        }
+      }
+      delay(2000);
       startTurn = false;
       state = 4;   
     }
