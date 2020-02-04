@@ -262,28 +262,22 @@ void loop() {
 
   // STATE: C & D MOVE
   } else if (state == 3) {  // C and D: move to the right or left depending on "turn" value
-    Serial.println("State C and D (start turn)");
-
-    if (!startTurn) {   // before reach turning point, continue on line
-      moveOnLine();
-    }
-    
-    if (LT_L && LT_R && !LT_M) { // when turning point is reached, stop robot and begin to turn
+    //Serial.println("State C and D (start turn)");
+    Serial.println(LT_M);
+    if (!LT_M) { // when turning point is reached, stop robot and begin to turn
       stopRobot(); 
-      startTurn = true;
-      Serial.println(LT_M);
-      while (!LT_M) { 
-        if (turn == 0) {
-          left(200, true);
-          prev = 0;
-        } else {
-          right(200, true);
-          prev = 1;
-        }
-      }
       delay(2000);
-      startTurn = false;
+      Serial.println(LT_M);
+      if (turn == 0) {
+        left(200, true);
+        prev = 0;
+      } else {
+        right(200, true);
+        prev = 1;
+      }
       state = 4;   
+    } else {
+      forward(150);
     }
 
   // STATE: E
