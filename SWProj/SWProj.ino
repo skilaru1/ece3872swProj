@@ -192,17 +192,6 @@ void setup(){
 
 
 void moveOnLine() {
-//  if (LT_M) {     // make sure line is centered under robot
-//    forward(150);
-//  } else {
-//    while (!LT_M) { // continue shifting until line is centered again
-//      if (LT_R) {   // if line is too far left, shift right
-//        right(150, true);
-//      } else {      // if line is too far right, shift left
-//        left(150, true);
-//      }
-//    }
-//  }
 
   if (LT_R) {
     right(150, true);
@@ -279,14 +268,17 @@ void loop() {
       moveOnLine();
     }
     
-    if (LT_L && LT_R) { // when turning point is reached, stop robot and begin to turn
+    if (LT_L && LT_R && !LT_M) { // when turning point is reached, stop robot and begin to turn
+      stopRobot(); 
       startTurn = true;
       Serial.println(LT_M);
       while (!LT_M) { 
         if (turn == 0) {
           left(200, true);
+          prev = 0;
         } else {
           right(200, true);
+          prev = 1;
         }
       }
       delay(2000);
@@ -306,9 +298,20 @@ void loop() {
     }
 
     if (LT_M && LT_R && LT_L) {   // check for long black bar
-      head.write(90);
-      delay(3000);
-      state = 0;  // return to start state
+      stopRobot();
+      forward(50);
+      delay(100);
+      stopRobot();
+      if (LT_M && !LT_R && !LT_L) { // make sure is actually at the black bar
+        back(50);
+        delay(200);
+        stopRobot();
+        if (LT_M && !LT_R && !LT_L) {
+          head.write(90);
+          delay(3000);
+          state = 0;  // return to start state
+        }
+      } 
     }
 
   // STATE: F
