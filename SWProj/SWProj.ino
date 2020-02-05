@@ -199,8 +199,8 @@ void moveOnLine() {
   } else if (LT_L) {
     left (150, true);
     prev = 0;
-  } else if (LT_M) {
-    forward(150);
+  } else if (LT_M || (LT_R && LT_L && LT_M)) {
+    forward(100);
   } else {
     if (prev == 1) {
       right(200, true);
@@ -262,24 +262,53 @@ void loop() {
 
   // STATE: C & D MOVE
   } else if (state == 3) {  // C and D: move to the right or left depending on "turn" value
-    Serial.println("State C and D (start turn)");
-    Serial.println(LT_M);
-    if (!LT_M) { // when turning point is reached, stop robot and begin to turn
-      stopRobot(); 
-      delay(2000);
-      Serial.println(LT_M);
-      if (turn == 0) {
-        left(200, true);
-        prev = 0;
-      } else {
-        right(200, true);
-        prev = 1;
-      }
-      state = 4;   
+//    Serial.println("State C and D (start turn)");
+//    Serial.println(LT_M);
+//    forward(100);
+//    if (LT_M + LT_L + LT_R == 0) { // when turning point is reached, stop robot and begin to turn
+//      stopRobot(); 
+//      delay(2000);
+//      while (!LT_L || !LT_R) {
+//        back(100);
+//      }
+//      stopRobot();
+//      delay(1000);
+//      Serial.println(LT_M);
+//      if (turn == 0) {
+//        left(200, false);
+//        prev = 0;
+//      } else {
+//        right(200, false);
+//        prev = 1;
+//      }
+//      state = 4;   
+//    }
+
+    if (LT_L || LT_R || LT_M) {
+     if (turn == 0) {
+      left (200, false);
+      prev = 0;
+     } else {
+      right(200, false);
+      prev = 1;
+     }
     } else {
-      forward(150);
+      stopRobot();
+      delay(2000);
+      Serial.println("GO TO 6");
+      state = 6;
     }
 
+  } else if (state == 6) {
+    if (!LT_L && !LT_M && !LT_R) {
+      Serial.println("NONE ON");
+      forward(100);
+    } else {
+      stopRobot();
+      Serial.println("FOUND LINE");
+      delay(1000);
+      state = 4;
+    }
   // STATE: E
   } else if (state == 4) {  // E: follow line and check for block C and black bar, return to state A when found
     Serial.println("State E");
