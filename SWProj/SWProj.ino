@@ -236,7 +236,7 @@ void loop() {
     
     curr = readDistance();
     Serial.println(curr);
-    if (curr <= 15) {
+    if (curr <= 20) {
       turn = 0;      // block B found, move to the left with state C
       Serial.println("Turn Left");
     } else {
@@ -287,25 +287,36 @@ void loop() {
     
     curr = readDistance();
     Serial.println(curr);
-    if (curr < 20) {   // check for block C existance
+    if (curr < 30) {   // check for block C existance
       state = 5;
     }
 
     if (LT_M && LT_R && LT_L) {   // check for long black bar
       stopRobot();
-      forward(50);
-      delay(100);
-      stopRobot();
-      if (LT_M && !LT_R && !LT_L) { // make sure is actually at the black bar
-        back(50);
-        delay(200);
-        stopRobot();
-        if (LT_M && !LT_R && !LT_L) {
-          head.write(90);
-          delay(3000);
-          state = 0;  // return to start state
-        }
-      } 
+      head.write(90);
+      delay(3000);
+      state = 0;
+//      if (turn == 0) {
+//        left(200, true);
+//        delay(1000);
+//      } else {
+//        right(150, true);
+//        delay(500);
+//      }
+//      stopRobot();
+//      head.write(90);
+//      delay(2000);
+//      state = 0;
+//      if (LT_M && !LT_R && !LT_L) { // make sure is actually at the black bar
+//        back(50);
+//        delay(200);
+//        stopRobot();
+//        if (LT_M && !LT_R && !LT_L) {
+//          head.write(90);
+//          delay(3000);
+//          state = 0;  // return to start state
+//        }
+//      } 
     }
 
   // STATE: F
