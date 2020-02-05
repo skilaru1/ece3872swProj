@@ -262,7 +262,7 @@ void loop() {
 
   // STATE: C & D MOVE
   } else if (state == 3) {  // C and D: move to the right or left depending on "turn" value
-    //Serial.println("State C and D (start turn)");
+    Serial.println("State C and D (start turn)");
     Serial.println(LT_M);
     if (!LT_M) { // when turning point is reached, stop robot and begin to turn
       stopRobot(); 
@@ -284,45 +284,31 @@ void loop() {
   } else if (state == 4) {  // E: follow line and check for block C and black bar, return to state A when found
     Serial.println("State E");
     moveOnLine();
-    
-    curr = readDistance();
+
+    if (readDistance() > 0)
+      curr = readDistance();
     Serial.println(curr);
     if (curr < 30) {   // check for block C existance
       state = 5;
     }
-
     if (LT_M && LT_R && LT_L) {   // check for long black bar
+      if (turn == 0) {
+        left(200, true);
+        delay(500);
+      } else {
+        right(150, true);
+        delay(500);
+      }
       stopRobot();
       head.write(90);
-      delay(3000);
+      delay(2000);
       state = 0;
-//      if (turn == 0) {
-//        left(200, true);
-//        delay(1000);
-//      } else {
-//        right(150, true);
-//        delay(500);
-//      }
-//      stopRobot();
-//      head.write(90);
-//      delay(2000);
-//      state = 0;
-//      if (LT_M && !LT_R && !LT_L) { // make sure is actually at the black bar
-//        back(50);
-//        delay(200);
-//        stopRobot();
-//        if (LT_M && !LT_R && !LT_L) {
-//          head.write(90);
-//          delay(3000);
-//          state = 0;  // return to start state
-//        }
-//      } 
     }
-
   // STATE: F
   } else if (state == 5) {  // F: if block C found, wait then return to E state
     Serial.println("State F");
     stopRobot();
+    delay(500);
 
     curr = readDistance();
     Serial.println(curr);
