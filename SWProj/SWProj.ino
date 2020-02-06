@@ -41,6 +41,8 @@ int curr = 0;   // current distance read
 int turn;   // 0 for left, 1 for right
 boolean startTurn = false; // when to turn at top of loop
 int prev;
+boolean seenBlock = false;
+int turnTimer = 0;
 
 /**
  *  Create reusable functions here or in additional files that
@@ -137,6 +139,29 @@ void right(int speed, bool inPlace) {
   analogWrite(ENB, speed);
 }
 
+void leftInPlace(int speed) {
+  //left motors
+  digitalWrite(IN1, LOW);
+   digitalWrite(IN2, HIGH);
+  
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+  //speed control
+  analogWrite(ENA, speed);
+  analogWrite(ENB, speed);
+}
+
+void rightInPlace(int speed) {
+  
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+
+  analogWrite(ENA, speed);
+  analogWrite(ENB, speed);
+}
 /** 
  *  Ultrasonic distance measurement.  Returns distance in cm.
  *  Max distance is ~1.5m, based on the timeout of pulseIn().
@@ -194,13 +219,13 @@ void setup(){
 void moveOnLine() {
 
   if (LT_R) {
-    right(150, true);
+    right(225, true);
     prev = 1;
   } else if (LT_L) {
-    left (150, true);
+    left (225, true);
     prev = 0;
   } else if (LT_M || (LT_R && LT_L && LT_M)) {
-    forward(100);
+    forward(125);
   } else {
     if (prev == 1) {
       right(200, true);
@@ -220,10 +245,10 @@ void loop() {
   if (state == 0) {         // A: start state
     Serial.println("State A");
     moveOnLine();
-    
+
     curr = readDistance();
     Serial.println(curr);
-    if (curr <= 10) {
+    if (curr <= 10 && curr > 0) {
       stopRobot();
       state = 1;      // if close to block A, move to state B
       head.write(180);     // turn sonar head to left
@@ -262,34 +287,14 @@ void loop() {
 
   // STATE: C & D MOVE
   } else if (state == 3) {  // C and D: move to the right or left depending on "turn" value
-//    Serial.println("State C and D (start turn)");
-//    Serial.println(LT_M);
-//    forward(100);
-//    if (LT_M + LT_L + LT_R == 0) { // when turning point is reached, stop robot and begin to turn
-//      stopRobot(); 
-//      delay(2000);
-//      while (!LT_L || !LT_R) {
-//        back(100);
-//      }
-//      stopRobot();
-//      delay(1000);
-//      Serial.println(LT_M);
-//      if (turn == 0) {
-//        left(200, false);
-//        prev = 0;
-//      } else {
-//        right(200, false);
-//        prev = 1;
-//      }
-//      state = 4;   
-//    }
+    Serial.println("State C and D (start turn)");
 
     if (LT_L || LT_R || LT_M) {
      if (turn == 0) {
-      left (200, false);
+      left(250, true);
       prev = 0;
      } else {
-      right(200, false);
+      right(250, true);
       prev = 1;
      }
     } else {
@@ -299,14 +304,13 @@ void loop() {
       state = 6;
     }
 
+  // part 2 of State C/D
   } else if (state == 6) {
     if (!LT_L && !LT_M && !LT_R) {
       Serial.println("NONE ON");
       forward(100);
     } else {
-      stopRobot();
       Serial.println("FOUND LINE");
-      delay(1000);
       state = 4;
     }
   // STATE: E
@@ -319,15 +323,25 @@ void loop() {
     Serial.println(curr);
     if (curr < 30) {   // check for block C existance
       state = 5;
+      seenBlock = true;
     }
-    if (LT_M && LT_R && LT_L) {   // check for long black bar
+    if (LT_M && LT_R && LT_L && seenBlock == true) {   // check for long black bar
+      stopRobot();
+      state = 7;
+      seenBlock = false;
+    }
+  } else if (state == 7) {
+    turnTimer++;
+    if (turnTimer < 5) {
       if (turn == 0) {
-        left(200, true);
-        delay(500);
+        leftInPlace(150);
       } else {
-        right(150, true);
-        delay(500);
+        rightInPlace(150);
       }
+    } else if (turnTimer < 7) {
+      forward(100);
+    } else {
+      turnTimer = 0;
       stopRobot();
       head.write(90);
       delay(2000);
@@ -346,5 +360,5 @@ void loop() {
     }
     
   }
-
+  
 }
