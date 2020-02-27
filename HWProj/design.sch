@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.0">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -3664,11 +3664,11 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device=""/>
 <part name="SUPPLY23" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="IC10" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="TL071" device="P" package3d_urn="urn:adsk.eagle:package:16409/2"/>
-<part name="R5" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="R"/>
-<part name="R7" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="R"/>
-<part name="R8" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="R"/>
-<part name="C3" library="HyTechDevices" deviceset="CAP" device="CAP_WIMA" value="C"/>
-<part name="C4" library="HyTechDevices" deviceset="CAP" device="CAP_WIMA" value="C"/>
+<part name="R5" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="1k"/>
+<part name="R7" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="1k"/>
+<part name="R8" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="1k"/>
+<part name="C3" library="HyTechDevices" deviceset="CAP" device="CAP_WIMA" value="0.0022uF"/>
+<part name="C4" library="HyTechDevices" deviceset="CAP" device="CAP_WIMA" value="0.0022uF"/>
 <part name="SUPPLY24" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device=""/>
 <part name="SUPPLY25" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="IC11" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="TL071" device="P" package3d_urn="urn:adsk.eagle:package:16409/2"/>
@@ -3677,10 +3677,10 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <part name="IC12" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="TL071" device="P" package3d_urn="urn:adsk.eagle:package:16409/2"/>
 <part name="GND12" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="GND13" library="HyTechSymbols" deviceset="GND" device=""/>
-<part name="R11" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="R"/>
-<part name="TM5" library="HyTechDevices" deviceset="TRIMPOT" device="" value="10K_Rq"/>
-<part name="TM6" library="HyTechDevices" deviceset="TRIMPOT" device="" value="10K_Rf"/>
-<part name="TM7" library="HyTechDevices" deviceset="TRIMPOT" device="" value="10K_Rf"/>
+<part name="R11" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="1k"/>
+<part name="TM5" library="HyTechDevices" deviceset="TRIMPOT" device="" value="50k_Rq"/>
+<part name="TM6" library="HyTechDevices" deviceset="TRIMPOT" device="" value="50k_Rf"/>
+<part name="TM7" library="HyTechDevices" deviceset="TRIMPOT" device="" value="50K_Rf"/>
 <part name="S2" library="switch" library_urn="urn:adsk.eagle:library:380" deviceset="TL32PO" device="" package3d_urn="urn:adsk.eagle:package:27745/1"/>
 </parts>
 <sheets>
@@ -3727,6 +3727,8 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <text x="177.8" y="0" size="1.778" layer="150"> Q, omega independently variable two-pole filter circuit</text>
 <text x="228.6" y="35.56" size="1.778" layer="150">signal routing</text>
 <text x="167.64" y="-73.66" size="1.778" layer="150">pots Rf to be replaced by OTAs with i_con source for Fs voltage control</text>
+<text x="246.38" y="-48.26" size="1.778" layer="150">Q = (Rq+R) / R</text>
+<text x="246.38" y="-40.64" size="1.778" layer="150">Fs = 1 / (2*pi*Rf*C)</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G1" x="88.9" y="43.18" smashed="yes">
@@ -3866,8 +3868,11 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <attribute name="NAME" x="53.34" y="37.465" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="53.34" y="48.26" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="IC7" gate="OTA1" x="73.66" y="-25.4" rot="MR180"/>
-<instance part="IC7" gate="SUPPLY" x="73.66" y="-25.4" rot="MR180"/>
+<instance part="IC7" gate="OTA1" x="73.66" y="-25.4" smashed="yes" rot="MR180">
+<attribute name="NAME" x="76.2" y="-20.32" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="76.2" y="-17.78" size="1.778" layer="96" rot="MR180"/>
+</instance>
+<instance part="IC7" gate="SUPPLY" x="73.66" y="-25.4" smashed="yes" rot="MR180"/>
 <instance part="SUPPLY16" gate="1" x="73.66" y="-15.24" smashed="yes" rot="MR180">
 <attribute name="VALUE" x="72.39" y="-12.7" size="1.778" layer="96" rot="MR180"/>
 </instance>
@@ -4456,10 +4461,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="185.42" y1="-43.18" x2="185.42" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="-27.94" x2="180.34" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="-27.94" x2="185.42" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="185.42" y1="-17.78" x2="187.96" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="185.42" y="-27.94"/>
-<label x="187.96" y="-17.78" size="1.778" layer="95" xref="yes"/>
 <pinref part="TM6" gate="G$1" pin="S"/>
 </segment>
 </net>
@@ -4483,10 +4485,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <pinref part="IC12" gate="A" pin="OUT"/>
 <wire x1="213.36" y1="-43.18" x2="210.82" y2="-43.18" width="0.1524" layer="91"/>
 <junction x="213.36" y="-43.18"/>
-<wire x1="213.36" y1="-27.94" x2="213.36" y2="-17.78" width="0.1524" layer="91"/>
 <junction x="213.36" y="-27.94"/>
-<wire x1="213.36" y1="-17.78" x2="215.9" y2="-17.78" width="0.1524" layer="91"/>
-<label x="215.9" y="-17.78" size="1.778" layer="95" xref="yes"/>
 <pinref part="TM5" gate="G$1" pin="S"/>
 <wire x1="213.36" y1="-55.88" x2="213.36" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="TM7" gate="G$1" pin="S"/>
