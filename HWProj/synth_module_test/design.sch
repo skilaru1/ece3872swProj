@@ -1981,7 +1981,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <part name="GND16" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="GND18" library="HyTechSymbols" deviceset="GND" device=""/>
-<part name="TM2" library="HyTechDevices" deviceset="TRIMPOT" device="" value="100k"/>
+<part name="TM2" library="HyTechDevices" deviceset="TRIMPOT" device="" value="50k"/>
 <part name="U$2" library="HyTechDevices" deviceset="PAM8302A_ADAFRUIT" device=""/>
 <part name="GND10" library="HyTechSymbols" deviceset="GND" device=""/>
 </parts>

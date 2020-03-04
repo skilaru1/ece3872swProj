@@ -2083,7 +2083,7 @@ NS Package M08A</description>
 <part name="SUPPLY21" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="IC13" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="TL071" device="P" package3d_urn="urn:adsk.eagle:package:16409/2"/>
 <part name="GND18" library="HyTechSymbols" deviceset="GND" device=""/>
-<part name="TM2" library="HyTechDevices" deviceset="TRIMPOT" device="" value="100k"/>
+<part name="TM2" library="HyTechDevices" deviceset="TRIMPOT" device="" value="50k"/>
 <part name="U$2" library="HyTechDevices" deviceset="PAM8302A_ADAFRUIT" device=""/>
 <part name="GND10" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="Q3" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="2N3904" device="" package3d_urn="urn:adsk.eagle:package:28523/2"/>
