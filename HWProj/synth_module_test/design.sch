@@ -1981,7 +1981,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <part name="GND16" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="GND18" library="HyTechSymbols" deviceset="GND" device=""/>
-<part name="TM2" library="HyTechDevices" deviceset="TRIMPOT" device="" value="10k"/>
+<part name="TM2" library="HyTechDevices" deviceset="TRIMPOT" device="" value="100k"/>
 <part name="U$2" library="HyTechDevices" deviceset="PAM8302A_ADAFRUIT" device=""/>
 <part name="GND10" library="HyTechSymbols" deviceset="GND" device=""/>
 </parts>
@@ -2035,6 +2035,7 @@ Source: http://www2.produktinfo.conrad.com/datenblaetter/700000-724999/705152-da
 <text x="195.58" y="68.58" size="1.778" layer="150">speaker output stage</text>
 <text x="20.32" y="104.14" size="1.778" layer="150">-100mV to 100mV signal range</text>
 <text x="205.74" y="35.56" size="1.778" layer="150">volume control</text>
+<text x="228.6" y="22.86" size="1.778" layer="150">max 1Vrms input</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G1" x="78.74" y="116.84" smashed="yes">
