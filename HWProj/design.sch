@@ -2146,7 +2146,6 @@ NS Package M08A</description>
 <part name="IC17" library="linear" library_urn="urn:adsk.eagle:library:262" deviceset="TL071" device="P" package3d_urn="urn:adsk.eagle:package:16409/2"/>
 <part name="GND5" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="U$4" library="HyTechDevices" deviceset="TEENSY_3.5_EXT" device=""/>
-<part name="SUPPLY44" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="+9V" device=""/>
 <part name="SUPPLY45" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 <part name="SUPPLY46" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
 </parts>
@@ -2229,6 +2228,7 @@ NS Package M08A</description>
 <wire x1="513.08" y1="271.78" x2="513.08" y2="180.34" width="0.254" layer="150"/>
 <wire x1="513.08" y1="180.34" x2="144.78" y2="180.34" width="0.254" layer="150"/>
 <text x="325.12" y="274.32" size="2.54" layer="150">digital</text>
+<text x="213.36" y="261.62" size="1.778" layer="150"> Vin is in the range of 3.6 - 6.0V !!</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G1" x="78.74" y="116.84" smashed="yes">
@@ -2649,9 +2649,6 @@ NS Package M08A</description>
 <attribute name="VALUE" x="127" y="220.98" size="1.778" layer="96"/>
 </instance>
 <instance part="U$4" gate="G$1" x="187.96" y="187.96" smashed="yes"/>
-<instance part="SUPPLY44" gate="G$1" x="210.82" y="259.08" smashed="yes">
-<attribute name="VALUE" x="208.915" y="262.255" size="1.778" layer="96"/>
-</instance>
 <instance part="SUPPLY45" gate="G$1" x="182.88" y="254" smashed="yes">
 <attribute name="VALUE" x="180.467" y="254.635" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -3484,10 +3481,6 @@ NS Package M08A</description>
 <pinref part="DC/DC1" gate="G$1" pin="+VIN"/>
 <wire x1="22.86" y1="228.6" x2="48.26" y2="228.6" width="0.1524" layer="91"/>
 <junction x="22.86" y="228.6"/>
-</segment>
-<segment>
-<pinref part="U$4" gate="G$1" pin="VIN"/>
-<pinref part="SUPPLY44" gate="G$1" pin="+9V"/>
 </segment>
 </net>
 <net name="N$1" class="0">
