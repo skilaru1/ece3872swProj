@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,20 +53,20 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="62" name="Desc" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="62" name="Desc" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -1998,6 +1998,22 @@ NS Package M08A</description>
 <text x="12.7" y="15.24" size="1.27" layer="25">&gt;NAME</text>
 <text x="12.7" y="17.78" size="1.27" layer="27">&gt;VALUE</text>
 </package>
+<package name="3.5MM_AUDIO_JACK">
+<pad name="L" x="0" y="0" drill="1.1" diameter="1.9304" shape="octagon"/>
+<pad name="R" x="0" y="10" drill="1.1" diameter="1.9304" shape="octagon"/>
+<pad name="GND" x="-5" y="5" drill="1.1" diameter="1.9304" shape="octagon"/>
+<wire x1="3.6" y1="-1" x2="3.6" y2="11" width="0.1524" layer="21"/>
+<wire x1="3.6" y1="-1" x2="-8" y2="-1" width="0.1524" layer="21"/>
+<wire x1="-11.5" y1="1.6" x2="-11.5" y2="8.4" width="0.1524" layer="21"/>
+<wire x1="-8" y1="11" x2="3.6" y2="11" width="0.1524" layer="21"/>
+<wire x1="-8" y1="11" x2="-8" y2="8.4" width="0.1524" layer="21"/>
+<wire x1="-8" y1="8.4" x2="-11.5" y2="8.4" width="0.1524" layer="21"/>
+<wire x1="-8" y1="-1" x2="-8" y2="1.6" width="0.1524" layer="21"/>
+<wire x1="-8" y1="1.6" x2="-11.5" y2="1.6" width="0.1524" layer="21"/>
+<pad name="P$1" x="0" y="7.5" drill="1.1" diameter="1.27" shape="square"/>
+<pad name="P$2" x="0" y="5" drill="1.1" diameter="1.27" shape="square"/>
+<pad name="P$3" x="0" y="2.5" drill="1.1" diameter="1.27" shape="square"/>
+</package>
 </packages>
 <symbols>
 <symbol name="DC/DC_STEP_UP_CONVERTOR_XL6009">
@@ -2025,6 +2041,18 @@ NS Package M08A</description>
 <text x="-12.7" y="10.16" size="1.27" layer="95">&gt;NAME</text>
 <text x="-4.471709375" y="0.23568125" size="1.778" layer="94">XL6009</text>
 <text x="-7.62" y="-2.54" size="1.778" layer="94">buck converter</text>
+</symbol>
+<symbol name="3.5MM_AUDIO_JACK">
+<wire x1="10.16" y1="17.78" x2="10.16" y2="0" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="17.78" width="0.1524" layer="94"/>
+<wire x1="0" y1="17.78" x2="10.16" y2="17.78" width="0.1524" layer="94"/>
+<pin name="L" x="15.24" y="17.78" visible="off" length="middle" rot="R180"/>
+<pin name="R" x="15.24" y="10.16" visible="off" length="middle" rot="R180"/>
+<pin name="GND" x="15.24" y="0" visible="off" length="middle" rot="R180"/>
+<text x="10.16" y="10.16" size="1.778" layer="94" rot="R180">RIGHT</text>
+<text x="5.08" y="0" size="1.778" layer="94">GND</text>
+<text x="10.16" y="17.78" size="1.778" layer="94" rot="R180">LEFT</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2057,6 +2085,23 @@ NS Package M08A</description>
 <connect gate="G$1" pin="+VOUT" pad="+OUT"/>
 <connect gate="G$1" pin="-VIN" pad="-IN"/>
 <connect gate="G$1" pin="-VOUT" pad="-OUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="3.5MM_AUDIO_JACK">
+<gates>
+<gate name="G$1" symbol="3.5MM_AUDIO_JACK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="3.5MM_AUDIO_JACK">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="L" pad="L"/>
+<connect gate="G$1" pin="R" pad="R"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -2289,6 +2334,8 @@ NS Package M08A</description>
 <part name="SUPPLY47" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="SUPPLY48" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device=""/>
 <part name="SP1" library="HyTechSymbols" deviceset="BUZZER" device=""/>
+<part name="GND23" library="HyTechSymbols" deviceset="GND" device=""/>
+<part name="U$6" library="userlib" deviceset="3.5MM_AUDIO_JACK" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2327,7 +2374,7 @@ NS Package M08A</description>
 <wire x1="378.46" y1="53.34" x2="378.46" y2="93.98" width="0.1524" layer="150" style="shortdash"/>
 <wire x1="378.46" y1="93.98" x2="259.08" y2="93.98" width="0.1524" layer="150" style="shortdash"/>
 <text x="307.34" y="96.52" size="1.778" layer="150">speaker output stage</text>
-<text x="317.5" y="58.42" size="1.778" layer="150">max 1Vrms input</text>
+<text x="322.58" y="58.42" size="1.778" layer="150">max 1Vrms input</text>
 <wire x1="53.34" y1="93.98" x2="53.34" y2="7.62" width="0.1524" layer="150" style="shortdash"/>
 <wire x1="53.34" y1="7.62" x2="101.6" y2="7.62" width="0.1524" layer="150" style="shortdash"/>
 <wire x1="101.6" y1="7.62" x2="101.6" y2="93.98" width="0.1524" layer="150" style="shortdash"/>
@@ -2370,16 +2417,18 @@ NS Package M08A</description>
 <wire x1="378.46" y1="45.72" x2="378.46" y2="7.62" width="0.1524" layer="150" style="shortdash"/>
 <wire x1="378.46" y1="7.62" x2="259.08" y2="7.62" width="0.1524" layer="150" style="shortdash"/>
 <wire x1="259.08" y1="7.62" x2="259.08" y2="45.72" width="0.1524" layer="150" style="shortdash"/>
-<text x="317.5" y="63.5" size="1.778" layer="150">hi-z input impedance??</text>
+<text x="322.58" y="63.5" size="1.778" layer="150">hi-z input impedance??</text>
 <text x="193.04" y="149.86" size="1.778" layer="150">square volume</text>
 <text x="208.28" y="139.7" size="1.778" layer="150">saw volume</text>
-<text x="279.4" y="71.12" size="1.778" layer="150">master volume</text>
+<text x="309.88" y="83.82" size="1.778" layer="150" rot="R180">master volume</text>
 <text x="307.34" y="48.26" size="1.778" layer="150">reference generation</text>
-<wire x1="340.36" y1="81.28" x2="340.36" y2="71.12" width="0.1524" layer="94"/>
-<wire x1="353.06" y1="81.28" x2="340.36" y2="81.28" width="0.1524" layer="94"/>
-<wire x1="353.06" y1="71.12" x2="340.36" y2="71.12" width="0.1524" layer="94"/>
-<text x="360.68" y="73.66" size="1.778" layer="94">4ohm
+<wire x1="345.44" y1="81.28" x2="345.44" y2="71.12" width="0.1524" layer="94"/>
+<wire x1="360.68" y1="81.28" x2="345.44" y2="81.28" width="0.1524" layer="94"/>
+<wire x1="360.68" y1="71.12" x2="345.44" y2="71.12" width="0.1524" layer="94"/>
+<text x="368.3" y="73.66" size="1.778" layer="94">4ohm
 5W</text>
+<text x="266.7" y="88.9" size="1.778" layer="150">inverted external outputs!!</text>
+<text x="281.94" y="58.42" size="1.778" layer="94" rot="R180">3.5mm jack</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G1" x="73.66" y="144.78" smashed="yes">
@@ -2551,13 +2600,13 @@ NS Package M08A</description>
 <instance part="GND17" gate="1" x="134.62" y="121.92" smashed="yes">
 <attribute name="VALUE" x="132.08" y="119.38" size="1.778" layer="96"/>
 </instance>
-<instance part="TM2" gate="G$1" x="299.72" y="73.66" smashed="yes" rot="MR180">
-<attribute name="NAME" x="302.514" y="70.739" size="1.778" layer="95" rot="MR180"/>
-<attribute name="VALUE" x="303.784" y="73.406" size="1.778" layer="96" rot="MR180"/>
+<instance part="TM2" gate="G$1" x="304.8" y="73.66" smashed="yes" rot="MR180">
+<attribute name="NAME" x="307.594" y="70.739" size="1.778" layer="95" rot="MR180"/>
+<attribute name="VALUE" x="308.864" y="73.406" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="U$2" gate="G$1" x="314.96" y="83.82" smashed="yes" rot="MR180"/>
-<instance part="GND10" gate="1" x="314.96" y="86.36" smashed="yes" rot="R180">
-<attribute name="VALUE" x="317.5" y="88.9" size="1.778" layer="96" rot="R180"/>
+<instance part="U$2" gate="G$1" x="320.04" y="83.82" smashed="yes" rot="MR180"/>
+<instance part="GND10" gate="1" x="320.04" y="86.36" smashed="yes" rot="R180">
+<attribute name="VALUE" x="322.58" y="88.9" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="Q3" gate="G1" x="73.66" y="50.8" smashed="yes">
 <attribute name="NAME" x="72.39" y="55.88" size="1.778" layer="95"/>
@@ -2768,8 +2817,8 @@ NS Package M08A</description>
 <instance part="P+3" gate="1" x="208.28" y="287.02" smashed="yes">
 <attribute name="VALUE" x="210.82" y="289.56" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="P+4" gate="1" x="309.88" y="78.74" smashed="yes" rot="R90">
-<attribute name="VALUE" x="307.34" y="81.28" size="1.778" layer="96"/>
+<instance part="P+4" gate="1" x="314.96" y="78.74" smashed="yes" rot="R90">
+<attribute name="VALUE" x="312.42" y="81.28" size="1.778" layer="96"/>
 </instance>
 <instance part="IC9" gate="A" x="38.1" y="144.78" smashed="yes" rot="MR180">
 <attribute name="NAME" x="40.64" y="139.065" size="1.778" layer="95" rot="MR180"/>
@@ -2803,8 +2852,8 @@ NS Package M08A</description>
 <instance part="GND5" gate="1" x="111.76" y="264.16" smashed="yes">
 <attribute name="VALUE" x="109.22" y="261.62" size="1.778" layer="96"/>
 </instance>
-<instance part="GND9" gate="1" x="299.72" y="66.04" smashed="yes">
-<attribute name="VALUE" x="297.18" y="63.5" size="1.778" layer="96"/>
+<instance part="GND9" gate="1" x="304.8" y="66.04" smashed="yes">
+<attribute name="VALUE" x="302.26" y="63.5" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY5" gate="1" x="287.02" y="15.24" smashed="yes" rot="R180">
 <attribute name="VALUE" x="288.29" y="13.97" size="1.778" layer="96" rot="R180"/>
@@ -2876,7 +2925,11 @@ NS Package M08A</description>
 <instance part="SUPPLY48" gate="1" x="342.9" y="15.24" smashed="yes" rot="R180">
 <attribute name="VALUE" x="344.17" y="13.97" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SP1" gate="1" x="353.06" y="76.2" smashed="yes" rot="R270"/>
+<instance part="SP1" gate="1" x="360.68" y="76.2" smashed="yes" rot="R270"/>
+<instance part="GND23" gate="1" x="289.56" y="58.42" smashed="yes">
+<attribute name="VALUE" x="287.02" y="55.88" size="1.778" layer="96"/>
+</instance>
+<instance part="U$6" gate="G$1" x="271.78" y="60.96" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -3055,13 +3108,13 @@ NS Package M08A</description>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="314.96" y1="81.28" x2="317.5" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="81.28" x2="322.58" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="GND10" gate="1" pin="GND"/>
-<wire x1="314.96" y1="81.28" x2="314.96" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="81.28" x2="320.04" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="A+"/>
-<wire x1="317.5" y1="71.12" x2="314.96" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="314.96" y1="71.12" x2="314.96" y2="81.28" width="0.1524" layer="91"/>
-<junction x="314.96" y="81.28"/>
+<wire x1="322.58" y1="71.12" x2="320.04" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="71.12" x2="320.04" y2="81.28" width="0.1524" layer="91"/>
+<junction x="320.04" y="81.28"/>
 </segment>
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
@@ -3130,6 +3183,11 @@ NS Package M08A</description>
 <segment>
 <pinref part="TM8" gate="G$1" pin="E"/>
 <pinref part="GND22" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="GND"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+<wire x1="287.02" y1="60.96" x2="289.56" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SAWTOOTH" class="0">
@@ -3405,9 +3463,17 @@ NS Package M08A</description>
 <label x="353.06" y="172.72" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<label x="292.1" y="78.74" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="TM2" gate="G$1" pin="A"/>
-<wire x1="299.72" y1="78.74" x2="292.1" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="78.74" x2="304.8" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="71.12" x2="289.56" y2="78.74" width="0.1524" layer="91"/>
+<junction x="289.56" y="78.74"/>
+<wire x1="289.56" y1="78.74" x2="289.56" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="83.82" x2="287.02" y2="83.82" width="0.1524" layer="91"/>
+<label x="287.02" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$6" gate="G$1" pin="L"/>
+<wire x1="287.02" y1="78.74" x2="289.56" y2="78.74" width="0.1524" layer="91"/>
+<pinref part="U$6" gate="G$1" pin="R"/>
+<wire x1="289.56" y1="71.12" x2="287.02" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$25" class="0">
@@ -3695,7 +3761,7 @@ NS Package M08A</description>
 <segment>
 <pinref part="U$2" gate="G$1" pin="VIN"/>
 <pinref part="P+4" gate="1" pin="+5V"/>
-<wire x1="312.42" y1="78.74" x2="317.5" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="78.74" x2="322.58" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -3741,7 +3807,7 @@ NS Package M08A</description>
 <segment>
 <pinref part="TM2" gate="G$1" pin="S"/>
 <pinref part="U$2" gate="G$1" pin="A-"/>
-<wire x1="304.8" y1="73.66" x2="317.5" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="309.88" y1="73.66" x2="322.58" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="DGNDLVL" class="0">
