@@ -9,25 +9,25 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="16" fill="1" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="17" fill="1" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="18" fill="1" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="19" fill="1" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="25" fill="1" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="26" fill="1" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="27" fill="1" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="28" fill="1" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="29" fill="1" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="30" fill="1" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="20" fill="1" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="21" fill="1" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="22" fill="1" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="23" fill="1" visible="yes" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
 <layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
@@ -2019,13 +2019,13 @@ NS Package M08A</description>
 <wire x1="21.8" y1="-0.5" x2="21.8" y2="8.7" width="0.1524" layer="21"/>
 <wire x1="0" y1="-0.5" x2="0" y2="8.7" width="0.1524" layer="21"/>
 <wire x1="0" y1="8.7" x2="21.8" y2="8.7" width="0.1524" layer="21"/>
-<pad name="1" x="2" y="3" drill="0.6" shape="square"/>
-<pad name="2" x="4.5" y="3" drill="0.6" shape="square"/>
-<pad name="3" x="7" y="3" drill="0.6" shape="square"/>
-<pad name="5" x="12" y="3" drill="0.6" shape="square"/>
-<pad name="6" x="14.5" y="3" drill="0.6" shape="square"/>
-<pad name="7" x="17" y="3" drill="0.6" shape="square"/>
-<pad name="8" x="19.5" y="3" drill="0.6" shape="square"/>
+<pad name="1" x="2" y="3" drill="0.6" diameter="1.6764" shape="square"/>
+<pad name="2" x="4.5" y="3" drill="0.6" diameter="1.6764" shape="square"/>
+<pad name="3" x="7" y="3" drill="0.6" diameter="1.6764" shape="square"/>
+<pad name="5" x="12" y="3" drill="0.6" diameter="1.6764" shape="square"/>
+<pad name="6" x="14.5" y="3" drill="0.6" diameter="1.6764" shape="square"/>
+<pad name="7" x="17" y="3" drill="0.6" diameter="1.6764" shape="square"/>
+<pad name="8" x="19.5" y="3" drill="0.6" diameter="1.6764" shape="square"/>
 <text x="7" y="5" size="1.27" layer="21">4.5-9Vin
 +/-15Vout</text>
 </package>
@@ -2215,7 +2215,7 @@ NS Package M08A</description>
 <part name="GND1" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device=""/>
 <part name="GND3" library="HyTechSymbols" deviceset="GND" device=""/>
-<part name="C1" library="HyTechDevices" deviceset="CAP" device="CAP_WIMA" value="0.0022u"/>
+<part name="C1" library="HyTechDevices" deviceset="CAP" device="PTH1" value="0.0022u"/>
 <part name="GND4" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="R3" library="HyTechDevices" deviceset="RESISTOR" device="AXIAL-0.3" value="1.5k"/>
@@ -2266,7 +2266,7 @@ NS Package M08A</description>
 <part name="GND8" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device=""/>
 <part name="GND11" library="HyTechSymbols" deviceset="GND" device=""/>
-<part name="C2" library="HyTechDevices" deviceset="CAP" device="CAP_WIMA" value="0.0022u"/>
+<part name="C2" library="HyTechDevices" deviceset="CAP" device="PTH1" value="0.0022u"/>
 <part name="GND14" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY29" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="GND15" library="HyTechSymbols" deviceset="GND" device=""/>
@@ -2350,10 +2350,10 @@ NS Package M08A</description>
 <part name="GND23" library="HyTechSymbols" deviceset="GND" device=""/>
 <part name="U$6" library="userlib" deviceset="3.5MM_AUDIO_JACK" device=""/>
 <part name="SUPPLY39" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="DGND" device=""/>
-<part name="U$7" library="userlib" deviceset="+/-15V_BOOST_CONVERTER" device=""/>
 <part name="SUPPLY40" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V+" device=""/>
 <part name="SUPPLY49" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="V-" device=""/>
 <part name="GND5" library="HyTechSymbols" deviceset="GND" device=""/>
+<part name="U$7" library="userlib" deviceset="+/-15V_BOOST_CONVERTER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2931,7 +2931,6 @@ NS Package M08A</description>
 <instance part="SUPPLY39" gate="G$1" x="322.58" y="83.82" smashed="yes" rot="R180">
 <attribute name="VALUE" x="325.247" y="86.995" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="U$7" gate="G$1" x="66.04" y="264.16" smashed="yes"/>
 <instance part="SUPPLY40" gate="1" x="76.2" y="269.24" smashed="yes">
 <attribute name="VALUE" x="74.93" y="270.51" size="1.778" layer="96"/>
 </instance>
@@ -2941,6 +2940,7 @@ NS Package M08A</description>
 <instance part="GND5" gate="1" x="78.74" y="264.16" smashed="yes" rot="R90">
 <attribute name="VALUE" x="81.28" y="264.16" size="1.778" layer="96"/>
 </instance>
+<instance part="U$7" gate="G$1" x="66.04" y="264.16" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -3068,8 +3068,8 @@ NS Package M08A</description>
 <pinref part="SUPPLY48" gate="1" pin="V+"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="6"/>
 <pinref part="SUPPLY40" gate="1" pin="V+"/>
+<pinref part="U$7" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -3184,8 +3184,8 @@ NS Package M08A</description>
 <pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="7"/>
 <pinref part="GND5" gate="1" pin="GND"/>
+<pinref part="U$7" gate="G$1" pin="7"/>
 </segment>
 </net>
 <net name="SAWTOOTH" class="0">
@@ -3282,8 +3282,8 @@ NS Package M08A</description>
 <pinref part="SUPPLY47" gate="1" pin="V-"/>
 </segment>
 <segment>
-<pinref part="U$7" gate="G$1" pin="8"/>
 <pinref part="SUPPLY49" gate="1" pin="V-"/>
+<pinref part="U$7" gate="G$1" pin="8"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -3693,13 +3693,13 @@ NS Package M08A</description>
 <pinref part="CN1" gate="G$1" pin="GNDBREAK"/>
 <wire x1="43.18" y1="264.16" x2="43.18" y2="261.62" width="0.1524" layer="91"/>
 <junction x="43.18" y="261.62"/>
-<pinref part="U$7" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="261.62" x2="50.8" y2="261.62" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="-VIN"/>
 <wire x1="50.8" y1="261.62" x2="55.88" y2="261.62" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="238.76" x2="50.8" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="238.76" x2="50.8" y2="261.62" width="0.1524" layer="91"/>
 <junction x="50.8" y="261.62"/>
+<pinref part="U$7" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="GND"/>
@@ -3733,12 +3733,12 @@ NS Package M08A</description>
 <wire x1="43.18" y1="269.24" x2="43.18" y2="266.7" width="0.1524" layer="91"/>
 <junction x="43.18" y="266.7"/>
 <wire x1="55.88" y1="266.7" x2="53.34" y2="266.7" width="0.1524" layer="91"/>
-<pinref part="U$7" gate="G$1" pin="2"/>
 <pinref part="U$5" gate="G$1" pin="+VIN"/>
 <wire x1="53.34" y1="266.7" x2="43.18" y2="266.7" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="248.92" x2="53.34" y2="248.92" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="248.92" x2="53.34" y2="266.7" width="0.1524" layer="91"/>
 <junction x="53.34" y="266.7"/>
+<pinref part="U$7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="+5V" class="0">
