@@ -6,6 +6,7 @@ void setup() {
   u = 4095;
   Serial.begin(9600);
   analogWriteResolution(12);
+  pinMode(13, OUTPUT);
 }
 
 void loop() {
@@ -14,7 +15,7 @@ void loop() {
   analogWrite(A22, u);
   i += 10;
   u -= 10;
-  //delay(50);
+  delay(50);
   Serial.println(i);
   if (i > 4095) {
     i = 0;
@@ -22,4 +23,5 @@ void loop() {
   if (u < 0) {
     u = 4095;
   }
+  digitalWrite(13, HIGH);
 }
