@@ -248,6 +248,8 @@ inverted output</text>
 <wire x1="65.405" y1="27.559" x2="65.405" y2="6.35" width="0.127" layer="21" style="shortdash"/>
 <wire x1="65.405" y1="6.35" x2="71.882" y2="6.35" width="0.127" layer="21" style="shortdash"/>
 <wire x1="71.882" y1="6.35" x2="71.882" y2="27.559" width="0.127" layer="21" style="shortdash"/>
+<text x="10.16" y="1.27" size="1.778" layer="21" rot="R180">+</text>
+<text x="66.04" y="6.35" size="1.778" layer="21">+</text>
 </plain>
 <libraries>
 <library name="HyTechDevices">
