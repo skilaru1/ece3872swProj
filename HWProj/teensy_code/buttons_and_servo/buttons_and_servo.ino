@@ -4,7 +4,7 @@ bool power = false;   // on/off boolean
 bool play = false;    // play/pause boolean
 int recSquare[10];    // square sound recording
 int recTriangle[10];  // triangle sound recording
-int ledPin = 6;       // recording light
+int ledPin = 0;       // recording light
 int recSize = 0;      // count for number of notes in recording
 Servo laser1;         // laser servo 1
 Servo laser2;         // laser servo 2
@@ -14,23 +14,23 @@ void setup()   {
   Serial.begin(38400);
   
   // LOW == off, HIGH == on
-  pinMode(7, INPUT_PULLUP);  // power on/off
-  pinMode(8, INPUT_PULLUP);  // play
-  pinMode(9, INPUT_PULLUP);  // pause
-  pinMode(10, INPUT_PULLUP); // record
-  pinMode(ledPin, OUTPUT);   // recording light
+  pinMode(33, INPUT_PULLUP);  // power on/off
+  pinMode(34, INPUT_PULLUP);  // play
+  pinMode(35, INPUT_PULLUP);  // pause
+  pinMode(36, INPUT_PULLUP);  // record
+  pinMode(ledPin, OUTPUT);    // recording light
 
   // Laser servos
-  laser1.attach(20);
-  laser2.attach(21);
+  laser1.attach(5);
+  laser2.attach(6);
 }
 
 
 // Function to record sound
 void startRecording() {
   // reset saved recording
-  recSquare[10] = {};
-  recTriangle[10] = {};
+  recSquare[10] = {};         // warning flagged here; possible error?
+  recTriangle[10] = {};       // warning flagged here; possible error?
   recSize = 0;
   
   // wait until record button is pressed again
