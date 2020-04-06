@@ -6,6 +6,8 @@ int recSquare[10];    // square sound recording
 int recTriangle[10];  // triangle sound recording
 int ledPin = 0;       // recording light
 int recSize = 0;      // count for number of notes in recording
+int DCMotor = 32;     // Pin for DC Motor based on schematic
+
 Servo laser1;         // laser servo 1
 Servo laser2;         // laser servo 2
 
@@ -20,9 +22,22 @@ void setup()   {
   pinMode(36, INPUT_PULLUP);  // record
   pinMode(ledPin, OUTPUT);    // recording light
 
+  pinMode(DCMotor, OUTPUT);       // DC motor
+  
   // Laser servos
   laser1.attach(5);
   laser2.attach(6);
+}
+
+
+// Function to change PWM based on desired DC motor speed
+void spinPyramid(bool spin, int d) {
+  if (spin) {
+    analogWrite(DCMotor, HIGH);
+    delay(d);
+    analogWrite(DCMotor, LOW);
+    delay(d);
+  }
 }
 
 
@@ -47,6 +62,8 @@ void startRecording() {
 void playSound() {
 
   float angle1, angle2;
+
+  spinPyramid(1, 16);
   for (int i = 0; i < recSize; i++) {
 
       // Turn on speaker and output recorded sound
@@ -65,7 +82,7 @@ void playSound() {
          play = false;
        }
   }
-  
+  spinPyramid(0, 0);
   play = false; // stop play after goes through recording once
 }
 
@@ -85,6 +102,9 @@ void normalPlay() {
   laser1.write(angle1);
   float angle2 = (tof_right % 90) - 90;
   laser2.write(angle2);
+
+  // spins pyramid
+  spinPyramid(1, 16);
   
 }
 
@@ -107,6 +127,7 @@ void loop()
 
     // Pause button
     if (digitalRead(9) == HIGH) {
+      spinPyramid(0,0);
       play = false;
     }
 
@@ -115,17 +136,20 @@ void loop()
       delay(1000);  // wait 1 sec to ensure button is released
       digitalWrite(ledPin, HIGH); // turn recording light on
       startRecording();
+      spinPyramid(0,0);
     }
 
     // Turn power off
     if (digitalRead(7) == HIGH) {
       power = false;
+      spinPyramid(0,0);
     }
   }
 
   // Turn power on
   if (digitalRead(7) == HIGH) {
     power = true;
+    spinPyramid(0,0);
   }
 
 }
