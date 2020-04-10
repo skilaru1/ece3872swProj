@@ -154,13 +154,17 @@ void normalPlay() {
 
 void loop()                     
 {
-  if(analogRead(A12)>800){   // Check for overcurrent using pin A12. analogRead returns a number from 0-1023
-    power = false;
-    break; // exit the loop
-    } 
+  
+
     
   // only use this loop if the power button has been pressed and is on
   while (power == true) {
+
+   // Comment out below because the voltage is default High
+   // if(analogRead(A12)>800){   // Check for overcurrent using pin A12. analogRead returns a number from 0-1023
+   // power = false;
+   // break; // exit the loop
+   // } 
 
     // Play sound from recording
     if (play == true) {
